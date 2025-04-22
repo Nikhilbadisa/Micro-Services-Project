@@ -1,0 +1,5 @@
+package com.sathya.currencyservice.controller;
+
+public class CurrencyController {
+
+}

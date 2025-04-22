@@ -1,0 +1,5 @@
+package com.sathya.currencyservice;
+
+public class CurrencyRequest {
+
+}

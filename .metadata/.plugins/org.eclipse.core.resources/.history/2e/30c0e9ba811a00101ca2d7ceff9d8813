@@ -1,0 +1,15 @@
+
+     insert into currency_exchange
+( conversion_rate, from_currency, to_currency)
+values (75, 'ASD', 'INR');
+      insert into currency_exchange
+( conversion_rate, from_currency, to_currency)
+values(85, 'EUR', 'INR');
+      insert into currency_exchange
+( conversion_rate, from_currency, to_currency)
+values(95, 'YEN', 'INR');
+      insert into currency_exchange
+( conversion_rate, from_currency, to_currency)
+values(105, 'POUND', 'INR');
+
+-- Give the h2 properties in application.properties file.

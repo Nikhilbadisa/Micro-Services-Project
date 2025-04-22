@@ -1,0 +1,8 @@
+package com.sathya.currencyservice.repository;
+
+import org.springframework.data.jpa.repository.cdi.JpaRepositoryExtension;
+
+public class CurrencyRepository extends jpa
+{
+
+}

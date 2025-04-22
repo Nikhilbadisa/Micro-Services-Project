@@ -1,0 +1,5 @@
+package com.sathya.exchange.repository;
+
+public interface ExchangeRepository {
+
+}
