@@ -12,15 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sathya.exchange.CurrencyExchange;
+import com.sathya.exchange.Service.ExchangeService;
 import com.sathya.exchange.repository.ExchangeRepository;
 
 
 @RestController
 @RequestMapping("/api/v1")
-public class ExchangeController {
+public class ExchangeController 
+{
 
-
-		@Autowired
+      
+		/*@Autowired
 		ExchangeRepository exchangeRepository;
 		
 		@GetMapping("/from/{fromCurrency}/to/{toCurrency}")
@@ -41,7 +43,31 @@ public class ExchangeController {
 					              .body(0.0);
 		}
 	       
-	}	
+	}*/	
+	
+	@Autowired
+    ExchangeService exchangeService;
+	
+	@GetMapping("/from/{fromCurrency}/to/{toCurrency}") 	
+	public ResponseEntity<Double> retrieveExchangeValues(@PathVariable("fromCurrency") String fromCurrency,@PathVariable("toCurrency") String toCurrency)
+	{
+		Double conversionRate = exchangeService.getConversionRate(fromCurrency, toCurrency);
+
+		if(conversionRate !=0.0)
+		{
+			return ResponseEntity.status(HttpStatus.OK)
+					.header("info", "data retrived successfully..")
+					.body(conversionRate);
+		}
+		else
+		{
+			return  ResponseEntity.status(HttpStatus.OK)
+					.header("info", "Data is not presented")
+					.body(0.0);
+		}
+
+	}
+
 		
 
 }

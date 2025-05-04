@@ -1,6 +1,0 @@
-CREATE TABLE currency_exchange (
-    id BIGINT AUTO_INCREMENT PRIMARY KEY,
-    from_currency VARCHAR(255),
-    to_currency VARCHAR(255),
-    conversion_rate DECIMAL(19, 4)
-);

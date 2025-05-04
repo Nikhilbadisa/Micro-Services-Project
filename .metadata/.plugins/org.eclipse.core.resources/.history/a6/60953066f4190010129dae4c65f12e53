@@ -1,5 +1,0 @@
-package com.sathya.currencyservice.repository;
-
-public interface CurrencyRepository {
-
-}
